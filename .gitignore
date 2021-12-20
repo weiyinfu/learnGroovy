@@ -1,0 +1,10 @@
+.DS_Store
+.vscode/
+node_modules/
+.idea/
+.pynb_checkpoints
+*.iml
+__pycache__/
+
+out/
+lib/
