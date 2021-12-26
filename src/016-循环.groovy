@@ -40,3 +40,5 @@ a = ["one": 1, "two": "three"]
 a.each { println(it.key + " : " + it.value) }
 
 a.each { it -> { println(it.key + " : " + it.value) } }
+
+4.times { println("天下大势为我所控") }

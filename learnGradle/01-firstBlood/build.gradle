@@ -1,0 +1,23 @@
+task hello {
+    doLast {
+        println 'Hello world!'
+    }
+}
+
+task helloSimple {
+    println 'Hello world!'
+}
+//在gradle中可以随意书写groovy代码
+task upper {
+    String someString = 'mY_nAmE'
+    println "Original: " + someString
+    println "Upper case: " + someString.toUpperCase()
+}
+task print99 {
+    for (i in 1..9) {
+        for (j in 1..i) {
+            printf("%d*%d=%d ", i, j, i * j)
+        }
+        println()
+    }
+}

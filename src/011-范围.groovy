@@ -2,6 +2,7 @@
 IntRange类是groovy特有的Class
 * */
 for (i in 1..5) {
+    //闭区间
     print(i + ",")
 }
 println()

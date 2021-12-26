@@ -11,4 +11,13 @@ class Rectangle {
 r = new Rectangle()
 printf("%d,%d\n", r.width, r.height)
 
-assert r.getClass()== Rectangle
+assert r.getClass() == Rectangle
+
+r.with {
+    width= 2
+    height= 5
+}
+
+printf("%d,%d\n", r.width, r.height)
+
+printf("%d,%d\n", r.width, r.height)

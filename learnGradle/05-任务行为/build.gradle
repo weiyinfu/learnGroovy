@@ -1,0 +1,25 @@
+task hello {
+    println 'Hello One'
+}
+hello.doFirst {
+    println 'Hello First'
+}
+hello.doLast {
+    println 'Hello Last'
+}
+hello {
+    println 'Hello Two'
+}
+
+//另一种写法
+task hello {
+    doLast {
+        println 'Hello world!'
+    }
+}
+task intro {
+    dependsOn hello
+    doLast {
+        println "I'm Gradle"
+    }
+}

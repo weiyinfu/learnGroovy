@@ -1,0 +1,12 @@
+task A {
+    println('A')
+}
+task B(dependsOn: ['A', 'C']) {
+    println('B')
+}
+task C {
+    println('C')
+}
+/*
+可以看出初始化阶段顺序是A、B、C，运行阶段顺序是A、C、B。
+* */

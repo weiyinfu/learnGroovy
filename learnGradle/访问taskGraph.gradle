@@ -1,0 +1,15 @@
+task distribution {
+    println "We build the zip with version=$version"
+}
+task release(dependsOn: 'distribution') {
+    println 'We release now'
+}
+//添加回调函数，在taskGraph构建结束的时候调用
+gradle.taskGraph.whenReady {
+    taskGraph ->
+        if (taskGraph.hasTask(release)) {
+            version = '1.0'
+        } else {
+            version = '1.0-SNAPSHOT'
+        }
+}

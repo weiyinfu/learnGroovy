@@ -1,0 +1,4 @@
+var myCopy = task(myCopy, type: Copy)
+myCopy.from 'resources'
+myCopy.into 'target'
+myCopy.include('**/*.txt', '**/*.xml', '**/*.properties')
